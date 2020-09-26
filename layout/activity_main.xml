@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_background"
+        tools:context="com.example.musicalstructureapp.MainActivity">
+
+        <Button
+            android:id="@+id/audiobooks"
+            style="@style/CategoryStyle"
+            android:background="@color/colorBackground"
+            android:text="@string/audiobooks" />
+
+        <Button
+            android:id="@+id/authors"
+            style="@style/CategoryStyle"
+            android:background="@color/colorBackground"
+            android:text="@string/authors" />
+
+        <Button
+            android:id="@+id/favorites"
+            style="@style/CategoryStyle"
+            android:background="@color/colorBackground"
+            android:text="@string/favorites" />
+
+
+
+    </LinearLayout>
