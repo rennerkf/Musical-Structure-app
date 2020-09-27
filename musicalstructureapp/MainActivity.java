@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the audiobooks category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, AudiobooksActivity.class);
+                // Create a new intent to open the {@link AudiobooksActivity}
+                Intent audiobooksIntent = new Intent(MainActivity.this, AudiobooksActivity.class);
 
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(audiobooksIntent);
 
             }
         });
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the authors category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, AuthorsActivity.class);
+                // Create a new intent to open the {@link AuthorsActivity}
+                Intent authorsIntent = new Intent(MainActivity.this, AuthorsActivity.class);
 
                 // Start the new activity
-                startActivity(familyIntent);
+                startActivity(authorsIntent);
             }
         });
 
@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the favorites category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link ColorsActivity}
-                Intent colorsIntent = new Intent(MainActivity.this, FavoritesActivity.class);
+                // Create a new intent to open the {@link FavoritesActivity}
+                Intent favoritesIntent = new Intent(MainActivity.this, FavoritesActivity.class);
 
                 // Start the new activity
-                startActivity(colorsIntent);
+                startActivity(favoritesIntent);
             }
         });
 
