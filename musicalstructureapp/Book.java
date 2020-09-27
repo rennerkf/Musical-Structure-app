@@ -20,6 +20,10 @@ public class Book {
             mTitleName = titleName;
         }
 
+        public Book(String authorName){
+            mAuthorName = authorName;
+        }
+
         /**
          * Get the author for the book.
          */
