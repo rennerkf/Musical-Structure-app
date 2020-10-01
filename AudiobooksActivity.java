@@ -10,10 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class AudiobooksActivity extends AppCompatActivity{
+    private Button mPlayButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_list);
+
+
+
 
         // Create an Array list of words
        final ArrayList<Book> books = new ArrayList<Book>();
@@ -40,7 +44,7 @@ public class AudiobooksActivity extends AppCompatActivity{
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //get the current audiobook from the ArrayList (songs) with the position of the clicked item.
+                //get the current audiobook from the ArrayList (audiobooks) with the position of the clicked item.
 
                 Book currentPlayingAudiobook = Book.get(position);
 
@@ -68,6 +72,35 @@ public class AudiobooksActivity extends AppCompatActivity{
 
         });
 
+//        books.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                // Creating intent and putting inside it information for the selected item, that retrieved from books data from the array list.
+//                Intent intent = new Intent(AudiobooksActivity.this, NowPlaying.class);
+//                intent.putExtra(Info.NOW_PLAYING, false);
+//                intent.putExtra(Info.BOOK_TITLE, books.get(position).getTitleName());
+//                intent.putExtra(Info.BOOK_AUTHOR, books.get(position).getAuthorName());
+//                intent.putExtra(Info.BOOK_COVER, books.get(position).getImageId());
+//                startActivity(intent);
+//            }
+//        });
+
+
+        // Setting click listener to the button "Now Playing"
+        mPlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AudiobooksActivity.this, NowPlaying.class);
+                intent.putExtra(Info.NOW_PLAYING, true);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void findViews() {
+        mPlayButton = (Button) findViewById(R.id.play);
+    }
 
     }
 }
