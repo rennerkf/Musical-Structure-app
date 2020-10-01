@@ -16,17 +16,17 @@ public class AudiobooksActivity extends AppCompatActivity{
         setContentView(R.layout.book_list);
 
         // Create an Array list of words
-        ArrayList<Book> books = new ArrayList<Book>();
+       final ArrayList<Book> books = new ArrayList<Book>();
 
         //words.add("one");
-        books.add(new Book("Lynsay Sands","Devil of the Highlands"));
-        books.add(new Book("Maya Banks","No Place To Run"));
-        books.add(new Book("J. K. Rowling","Harry Potter And The Sorcerer's Stone"));
-        books.add(new Book("Gena Showalter","Catch A Mate"));
-        books.add(new Book("Geoff Colvin","Talent Is Overrated"));
-        books.add(new Book("Meg Jay","The Defining Decade"));
-        books.add(new Book("J. K. Rowling","Harry Potter And The Chamber of Secrets"));
-        books.add(new Book("J. K. Rowling","Harry Potter And The Goblet Of Fire"));
+        books.add(new Book("Lynsay Sands","Devil of the Highlands",R.drawable.devilhighlands));
+        books.add(new Book("Maya Banks","No Place To Run", R.drawable.noplace));
+        books.add(new Book("J. K. Rowling","Harry Potter And The Sorcerer's Stone", R.drawable.sorcerersstone));
+        books.add(new Book("Gena Showalter","Catch A Mate", R.drawable.catchmate));
+        books.add(new Book("Geoff Colvin","Talent Is Overrated",R.drawable.talentoverrated));
+        books.add(new Book("Meg Jay","The Defining Decade",R.drawable.definingcode));
+        books.add(new Book("J. K. Rowling","Harry Potter And The Chamber of Secrets",R.drawable.chambersecrets));
+        books.add(new Book("J. K. Rowling","Harry Potter And The Goblet Of Fire", R.drawable.gobletfire));
 
         WordAdapter adapter =
                 new WordAdapter(this, books);
@@ -42,7 +42,7 @@ public class AudiobooksActivity extends AppCompatActivity{
 
                 //get the current audiobook from the ArrayList (songs) with the position of the clicked item.
 
-                Audiobook currentPlayingAudiobook = Audiobook.get(position);
+                Book currentPlayingAudiobook = Book.get(position);
 
                 //get the title name and author name from the currentPlayingAduiobook object
 
@@ -52,7 +52,7 @@ public class AudiobooksActivity extends AppCompatActivity{
 
                 //use explicit Intent to open the NowPalyingActivity and store the data of the song to this Intent object.
 
-                Intent openAudioPlayer = new Intent(MainActivity.this, NowPlaying.class);
+                Intent openAudioPlayer = new Intent(AudiobooksActivity.this, NowPlaying.class);
 
                 //put the data on the Intent as (key, value) pair
 
