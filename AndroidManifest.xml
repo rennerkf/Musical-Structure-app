@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AudiobooksActivity"/>
+        <activity android:name=".NowPlaying"/>
         <activity android:name=".AuthorsActivity"/>
         <activity android:name=".FavoritesActivity"/>
         <activity android:name=".MainActivity">
