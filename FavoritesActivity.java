@@ -1,5 +1,8 @@
 package com.example.musicalstructureapp;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -14,7 +17,7 @@ public class FavoritesActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.book_list);
+        setContentView(R.layout.word_list);
         // Create an Array list of words
         ArrayList<Book> books = new ArrayList<Book>();
 
@@ -28,5 +31,13 @@ public class FavoritesActivity extends AppCompatActivity{
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+
+
+
+
+
+
     }
+
 }
